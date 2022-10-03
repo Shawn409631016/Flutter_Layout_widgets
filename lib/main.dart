@@ -14,19 +14,69 @@ void main() {
 
   var img = Image.network("https://i.epochtimes.com/assets/uploads/2021/08/id13156667-shutterstock_376153318-600x400.jpg");
 
-  var appBody = Column(
-
-    children: const <Widget>[
-      Text('第一行文字'),
-      Text('第二行文字'),
-      Expanded(
-        child: FittedBox(
-          fit: BoxFit.contain,
-          child: FlutterLogo(),
-        ),
+  // var appBody = Column(
+  //
+  //   children: const <Widget>[
+  //     Text('物件1', style: TextStyle(fontSize: 50),),
+  //     Text('物件2', style: TextStyle(fontSize: 50),),
+  //     Text('物件3', style: TextStyle(fontSize: 50),),
+  //   ],
+  //
+  //
+  // );
+  // var appBody = Row(
+  //
+  //   children: const <Widget>[
+  //     Expanded(
+  //       child: Text('物件1', style: TextStyle(fontSize: 50),),
+  //     ),
+  //     Expanded(
+  //       child: Text('物件2', style: TextStyle(fontSize: 50),),
+  //     ),
+  //     Expanded(
+  //       child: Text('物件3', style: TextStyle(fontSize: 50),),
+  //     ),
+  //   ],
+  //
+  // );
+  var appBody = GridView.count(
+    primary: false,
+    padding: const EdgeInsets.all(20),
+    crossAxisSpacing: 10,
+    mainAxisSpacing: 10,
+    crossAxisCount: 2,
+    children: <Widget>[
+      Container(
+        padding: const EdgeInsets.all(8),
+        color: Colors.teal[100],
+        child: const Text("He'd have you all unravel at the"),
+      ),
+      Container(
+        padding: const EdgeInsets.all(8),
+        color: Colors.teal[200],
+        child: img,
+      ),
+      Container(
+        padding: const EdgeInsets.all(8),
+        color: Colors.teal[300],
+        child: img,
+      ),
+      Container(
+        padding: const EdgeInsets.all(8),
+        color: Colors.teal[400],
+        child: const Text('Who scream'),
+      ),
+      Container(
+        padding: const EdgeInsets.all(8),
+        color: Colors.teal[500],
+        child: const Text('Revolution is coming...'),
+      ),
+      Container(
+        padding: const EdgeInsets.all(8),
+        color: Colors.teal[600],
+        child: img,
       ),
     ],
-
 
   );
 
